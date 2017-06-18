@@ -1,0 +1,4 @@
+.gradle/
+.syntastic_javac_config
+Makefile
+build/
