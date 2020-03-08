@@ -1,36 +1,35 @@
-
-buildscript {
-  ext {
-    springBootVersion = '1.5.4.RELEASE'
-  }
-  repositories {
-    mavenCentral()
-  }
-  dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-  }
-}
-
 plugins {
-  id "com.scuilion.syntastic" version "0.3.8"
+	id 'org.springframework.boot' version '2.2.5.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'java'
 }
 
-apply plugin: 'java'
-apply plugin: 'application'
-apply plugin: 'org.springframework.boot'
-
+group = 'com.diego'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-mainClassName = "com.tenoch.DventuraApplication"
+sourceCompatibility = '11'
 
 repositories {
-  mavenCentral()
+	mavenCentral()
 }
 
+ext {
+	set('springBootAdminVersion', "2.2.1")
+}
 
 dependencies {
-  compile('org.springframework.boot:spring-boot-starter-web')
-  compile('org.springframework.boot:spring-boot-devtools')
-  testCompile('org.springframework.boot:spring-boot-starter-test')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'de.codecentric:spring-boot-admin-starter-server'
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 }
 
+dependencyManagement {
+	imports {
+		mavenBom "de.codecentric:spring-boot-admin-dependencies:${springBootAdminVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
