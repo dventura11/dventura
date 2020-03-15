@@ -3,17 +3,6 @@
 
   <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FFBGRW5RJ4"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FFBGRW5RJ4');
-    </script>
-    <!-- End Global site tag (gtag.js) - Google Analytics -->
-
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -53,12 +42,11 @@
   </head>
 
   <body id="page-top" class="index">
-
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WVF56G3"
                       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
+   
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -106,7 +94,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <img class="img-responsive img-circle" src="img/profile.jpg" alt="">
+            <img id="profile-image" class="img-responsive img-circle" src="img/profile.jpg" alt="">
             <div class="intro-text">
               <span class="name">Diego Ventura</span>
               <hr class="star-light">
@@ -120,16 +108,16 @@
           <div class="col-lg-12">
             <ul class="list-inline">
               <li>
-                <a href="computer-science.html" class="btn-link">Computer science</a>
+                <a href="/topics/computer-science.html" class="btn-link">Computer science</a>
               </li>
               <li>
-                <a href="machine-learning.html" class="btn-link">Machine Learning</a>
+                <a href="/topics/machine-learning.html" class="btn-link">Machine Learning</a>
               </li>
               <li>
-                <a href="visualization.html" class="btn-link">Data visualization</a>
+                <a href="/topics/visualization.html" class="btn-link">Data visualization</a>
               </li>
               <li>
-                <a href="security.html" class="btn-link">IT Security</a>
+                <a href="/topics/security.html" class="btn-link">IT Security</a>
               </li>
             </ul>
           </div>
@@ -212,7 +200,7 @@
       </div>
     </section>
 
-    <!-- Social networks sectin-->
+    <!-- Open Data section-->
     <section class="success" id="open-data">
       <div class="container">
         <div class="row">
@@ -226,28 +214,28 @@
           <div class="col-lg-4 col-lg-offset-2">
             <H4>Coronavirus real time</H4>
             <a href='https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6' target="_blank">
-              <img class="img-responsive" src="img/interest/coronavirus.png" alt="coronavirus dashboard">
+              <img  id="coronavirus-img" class="img-responsive" src="img/interest/coronavirus.png" alt="coronavirus dashboard">
             </a>
           </div>
 
           <div class="col-lg-4 col-lg-offset-2">
             <H4>México violence stadistics</H4>
             <a href='https://elcri.men' target="_blank">
-              <img class="img-responsive" src="img/interest/elcrimen.png" alt="elcri.men">
+              <img id="criment-img" class="img-responsive" src="img/interest/elcrimen.png" alt="elcri.men">
             </a>
           </div>
 
           <div class="col-lg-4 col-lg-offset-2">
             <H4>Where is starman</H4>
             <a href='https://spacein3d.com/starman' target="_blank">
-              <img class="img-responsive" src="img/interest/starman.jpg" alt="starman live tracking">
+              <img id="starman-img" class="img-responsive" src="img/interest/starman.jpg" alt="starman live tracking">
             </a>
           </div>
 
           <div class="col-lg-4 col-lg-offset-2">
             <H4>Flights real time tracking</H4>
             <a href='https://es.flightaware.com/live/' target="_blank">
-              <img class="img-responsive" src="img/interest/flightaware.png" alt="vuelos live tracking">
+              <img id="flighstware-img" class="img-responsive" src="img/interest/flightaware.png" alt="vuelos live tracking">
             </a>
           </div>
 
@@ -419,9 +407,10 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/freelancer.js"></script>
 
-    <~-- external JavaScript-->
+    <!-- external JavaScript-->
     <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <!-- end external JavaScript-->
   </body>
 
 </html>
